@@ -19,11 +19,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" integrity="sha512-Rdk63VC+1UYzGSgd3u2iadi0joUrcwX0IWp2rTh6KXFoAmgOjRS99Vynz1lJPT8dLjvo6JZOqpAHJyfCEZ5KoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- Script dedicado -->
 <script src="{{ asset('js/app.js') }}"></script>
-
-<!-- Configuração do vite -->
-<!-- CSS -->
-<link rel="stylesheet" href="{{ asset('app/build/assets/app-f278af64.css') }}">
-
-<!-- JS -->
-<script type="module" src="{{ asset('app/build/assets/app-898d4f54.js') }}"></script>
-
