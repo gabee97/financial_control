@@ -48,6 +48,10 @@ Route::get('/db-test', function () {
     }
 });
 
+Route::get('/check-db', function () {
+    return 'DB Host: ' . config('database.connections.mysql.host');
+});
+
 
 // Rotas de autenticação (Breeze)
 require __DIR__.'/auth.php';
