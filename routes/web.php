@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TransactionController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,16 @@ Route::middleware('auth')->group(function () {
     Route::resource('transactions', TransactionController::class);
     Route::resource('categories/create', CategoryController::class);
     Route::resource('categories', CategoryController::class);
+});
+
+
+Route::get('/db-test', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Conexão com o banco de dados bem-sucedida! Banco: " . DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        return "Erro ao conectar ao banco de dados: " . $e->getMessage();
+    }
 });
 
 
